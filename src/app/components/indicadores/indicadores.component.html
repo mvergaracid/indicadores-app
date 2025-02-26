@@ -1,0 +1,20 @@
+<div class="content">
+  <ul
+    class="border border-gray-300 rounded-b-lg divide-y divide-gray-200 list-container"
+  >
+    @for(indicador of indicadoresValues; track indicador) {
+    <li
+      class="flex justify-between items-center p-4 hover:bg-gray-100"
+      (click)="verLista(indicador)"
+    >
+      <div>
+        <p class="text-gray-900 font-medium">{{ indicador.nombre }}</p>
+        <p class="text-blue-600 text-sm">{{ indicador.tipo }}</p>
+      </div>
+      <button class="info-btn" (click)="verDetalle(indicador)">
+        <i class="fas fa-info-circle"></i>
+      </button>
+    </li>
+    }
+  </ul>
+</div>

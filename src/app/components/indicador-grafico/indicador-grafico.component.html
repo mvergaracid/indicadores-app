@@ -1,0 +1,25 @@
+<div class="content">
+  <div class="list-container">
+    @if(indicadorValues) {
+
+    <h2 class="valor-indicador">{{ symbol }}{{ valor }}</h2>
+    <div class="info-container">
+      <div class="info-row">
+        <div class="label">Nombre:</div>
+        <div class="input-box">{{ indicadorValues.nombre }}</div>
+      </div>
+      <div class="info-row">
+        <div class="label">Fecha:</div>
+        <div class="input-box">{{ fecha }}</div>
+      </div>
+      <div class="info-row">
+        <div class="label">Unidad de Medida:</div>
+        <div class="input-box">{{ indicadorValues.tipo }}</div>
+      </div>
+    </div>
+    }
+    <div class="grafico">
+      <canvas #chartCanvas></canvas>
+    </div>
+  </div>
+</div>

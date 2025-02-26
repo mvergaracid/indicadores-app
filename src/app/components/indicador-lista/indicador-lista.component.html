@@ -1,0 +1,18 @@
+<div class="content">
+  @if(indicadorValues) {
+  <ul class="list-container">
+    @for(indicador of indicadorValues.data; track indicador) {
+    <li class="valor-item">
+      <span class="col fecha">{{ indicador.Fecha }}</span>
+      <span class="col valor">
+        @if (indicadorValues.symbol!='%') {
+        {{ indicadorValues.symbol }} {{ indicador.Valor }}
+        } @else {
+        {{ indicador.Valor }} {{ indicadorValues.symbol }}
+        }
+      </span>
+    </li>
+    }
+  </ul>
+  }
+</div>

@@ -1,0 +1,23 @@
+<!-- <header class="header">
+  <button class="menu-btn" *ngIf="router.url !== '/'" (click)="volver()">
+    ← Volver
+  </button>
+  <h1>Indicadores</h1>
+</header> -->
+
+<header class="header">
+  <div class="header-content">
+    @if(router.url !== '/') {
+    <button class="menu-btn" (click)="volver()">
+      <i class="fas fa-chevron-left"></i> Indicadores
+    </button>
+
+    } @else {
+    <button class="menu-btn">&#9776;</button>
+    <!-- <button mat-icon-button (click)="openContactModal()">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    }
+    <h1 class="titulo">{{ title }}</h1>
+  </div>
+</header>
