@@ -32,7 +32,6 @@ export class IndicadoresComponent implements OnInit {
   constructor(private indicadoresService: IndicadoresService, private indicadorStateService: IndicadorStateService, private headerService: HeaderService, private router: Router) { }
 
   ngOnInit(): void {
-    console.log('ngOnInit')
     this.headerService.updateTitle('Indicadores');
     combineLatest([
       this.indicadoresService.getDayIndicador('dolar', 30),
