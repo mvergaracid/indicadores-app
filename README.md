@@ -4,16 +4,20 @@ Esta App (Angular 17) permite consultar los indicadores económicos de acuerdo a
 
 ### Forma de Uso:
 
-1. Construir imagen docker
+1. Construir imagen docker:
+   docker build -t indicadores-app .
+
 2. Ejecutar:
 
-docker-compose up
+   docker-compose up
 
 En el archivo docker-compose.yml, debes cambiar la API_KEY, que la puedes obtener desde la CMF API
 
 Una vez que el container se encuentre corriendo, ve a la dirección:
 
-http://localhost:4000 para acceder a la aplicación
+http://localhost:4000
+
+, para acceder a la aplicación
 
 ### Para correr los test unitarios:
 
